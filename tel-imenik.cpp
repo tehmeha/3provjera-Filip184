@@ -31,9 +31,9 @@ int main()
             cin.ignore();
             getline(cin, prezimeIme[brojOsoba]);
             cout << "Unesite broj telefona" << endl;
-            cin >> brTelefona[];
+            cin >> brTelefona[brojOsoba];
             cout << "Unesite adresu: " << endl;
-            cin.ignore[];
+            cin.ignore();
             getline(cin, adresa[brojOsoba]);
             brojOsoba++;
         }
@@ -43,14 +43,36 @@ int main()
             for( int i = 0; i < brojOsoba; i++ )
             {
                 cout << prezimeIme[i] << endl;
+                cout << brTelefona[i] << endl;
+                cout << adresa[i] << endl;
             }
         }
         else if( izbor == 3 )
         {
-
+            unsigned long long int brtelefona;
+            cout << " Unesite broj telefona kojeg zelite pronaci: ";
+            cin >> brtelefona;
+            broj postoji = false;
+            for (int i=0; i < brojOsoba; i++)
+            {
+                if (brtelefona == brTelefona[i])
+                {
+                    postoji = true;
+                    break;
+                }
+            }
+            if (brtelefona != brtelefona[i])
+            {
+                postoji = false;
+                break;
+            }
         }
         else if( izbor == 4 )
         {
+            ime i prezime postoji = false;
+            cin >> prezimeIme[brojosoba];
+            cout << brTelefona[brojOsoba];
+            cout << adresa[brojOsoba];
         }
         else if( izbor == 5 )
         {
